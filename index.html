@@ -1,0 +1,75 @@
+<DOCTYPE html>
+<html lang="pt_BR">
+
+  <head>
+    <title>Minha primeira Home de site</title>
+	<meta charset="utf-8" />
+
+  </head>
+  
+  <style>
+	body{
+	  text-align: center;
+	  font-family: Trebuchet MS;
+	}
+	
+	button{
+	  width:100; 
+	  height:30;
+	}
+    
+	#audio-page {
+      display: none;
+	  align: center;
+	  margin-top:30px;
+	}
+  
+  </style>
+  
+  <body >
+  
+    <h1>
+	Home
+	</h1>
+	
+  
+	<p>
+	Site para estudo do elemento 'iframe'
+	</p> 
+	
+	<small>
+	
+	  <p>
+	  Clique no botão abaixo para exibir ou ocultar o iframe com áudio:
+	  </p>
+	  
+	  <button type="button" value="Exibir Iframe" onclick="exibirIframe();">Audio</button>
+	  
+	</small>
+	
+	<br />		
+	
+	<iframe src="html-audio.html" id="audio-page" width="500" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" > 
+	  <p>Your browser does not support iframes.</p>
+	</iframe>
+
+	
+  </body>
+  
+  <script>
+    var iframe = document.getElementById("audio-page");
+    alert( "Frame title: " + iframe.contentWindow.title );
+  
+    function exibirIframe(){
+	  if (iframe.style.display == "none") {
+	  iframe.style.display = "inline";
+	  }else{
+	  iframe.style.display = "none";
+	  }
+	
+	  console.log(iframe);
+    }
+  </script>
+
+
+</html>
