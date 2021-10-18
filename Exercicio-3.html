@@ -1,0 +1,77 @@
+<DOCTYPE html>
+<html lang="pt_BR">
+
+  <head>
+    <title>Minha primeira Home de site</title>
+	<meta charset="utf-8" />
+
+  </head>
+  
+  <style>
+	body{
+	  text-align: center;
+	  font-family: Trebuchet MS;
+	}
+	
+	button{
+	  width:100; 
+	  height:30;
+	  border
+	}
+    
+	#video-rap {
+      display: none;
+	  align: center;
+	  margin-top:30px;
+	}
+  
+  </style>
+  
+  <body >
+  
+    <h1>
+	Home
+	</h1>
+	
+  
+	<p>
+	Site para estudo do elemento 'iframe'
+	</p> 
+	
+	
+	
+	<small>
+	
+	  <p>
+	  Clique no botão abaixo para exibir ou ocultar o iframe e curtir uma musiquinha:
+	  </p>
+	  
+	  <button type="button" value="Exibir Iframe" onclick="exibirIframe();">Clique Aqui</button>
+	  
+	</small>
+	
+	<br />		
+	
+	<iframe src="https://www.youtube.com/embed/PAGxkdAe2fg" allowfullscreen id="video-rap" width="30%" height="30%" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" > 
+	  <p>Your browser does not support iframes.</p>
+	</iframe>
+
+	
+  </body>
+
+  <script>
+    var iframe = document.getElementById("video-rap");
+    alert( "Frame title: " + iframe.contentWindow.title );
+  
+    function exibirIframe(){
+	  if (iframe.style.display == "none") {
+	  iframe.style.display = "inline";
+	  }else{
+	  iframe.style.display = "none";
+	  }
+	
+	  console.log(iframe);
+    }
+  </script>
+
+</html>
